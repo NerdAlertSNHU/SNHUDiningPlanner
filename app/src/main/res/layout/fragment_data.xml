@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/text_initial_funds"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Initial Funds: $####.##)"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_currentBalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Current Balance: "
+                        android:textSize="15sp" />
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/text_daysUntilEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Days Until End of Semester: "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_funds_remaining"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Funds Remaining: ####"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/text_AvgSpentPerDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Average Amount Spent Per Day: "
+                        android:textSize="15sp" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/text_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="If you continue..."
+                        android:textSize="15sp" />
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:background="?android:attr/listDivider" />
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="60dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/linear_databoxes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_purchases"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Purchases: "
+                        android:textAlignment="viewStart"
+                        android:textSize="17sp" />
+
+                    //https://stackoverflow.com/questions/7241145/creating-linearlayout-in-java-elements-are-not-shown
+                    //You might need to add some code to create more of these for better
+                    structure/UX - Dylan
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_dataBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="" />
+
+                        <!--<TextView
+                            android:id="@+id/text_date1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="##/##/####" />
+
+                        <TextView
+                            android:id="@+id/text_amount1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="$$$$" />
+-->
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <!--<ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".5">
+
+                <LinearLayout
+                    android:id="@+id/linear_databoxes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_purchases"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Purchases: "
+                        android:textAlignment="viewStart"
+                        android:textSize="20sp" />
+
+                    //https://stackoverflow.com/questions/7241145/creating-linearlayout-in-java-elements-are-not-shown
+                    //You might need to add some code to create more of these for better structure/UX - Dylan
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/text_date1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="##/##/####" />
+
+                        <TextView
+                            android:id="@+id/text_date1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="##/##/####" />
+
+                        <TextView
+                            android:id="@+id/text_amount1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="$$$$" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
